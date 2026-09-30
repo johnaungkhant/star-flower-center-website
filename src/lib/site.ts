@@ -1,18 +1,18 @@
 export const site = {
   name: "Star Flower Centre",
   fullName: "Star Flower Centre Special Education Needs",
-  tagline: "Unlocking bright futures for every child.",
+  tagline: "Work, learn and play together.",
   phone: "+66 (0) 2 000 0000",
   email: "hello@starflowercentre.org",
   address: {
+    // Replace line1 with the Centre's street address.
     line1: "123 Sunflower Lane",
-    line2: "Bang Kapi, Bangkok 10240",
+    line2: "Mae Sot, Tak Province 63110",
     country: "Thailand",
   },
   hours: [
-    { day: "Monday – Friday", time: "08:00 – 16:30" },
-    { day: "Saturday", time: "09:00 – 12:00 (family sessions)" },
-    { day: "Sunday & Public Holidays", time: "Closed" },
+    { day: "Monday – Friday", time: "09:00 – 15:00" },
+    { day: "Saturday, Sunday & Public Holidays", time: "Closed" },
   ],
   // Replace with the centre's registered PromptPay ID (phone number, national ID, or e-wallet ID).
   promptPayId: "0812345678",

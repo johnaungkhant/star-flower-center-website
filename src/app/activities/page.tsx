@@ -1,90 +1,130 @@
 import type { Metadata } from "next";
-import { Accessibility, Calendar, Palette, Sun, Utensils } from "lucide-react";
+import {
+  Blocks,
+  BookOpenCheck,
+  Coins,
+  Gift,
+  Home,
+  Megaphone,
+  School,
+  Stethoscope,
+  Users,
+} from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export const metadata: Metadata = {
-  title: "Activities & Success Stories",
+  title: "Activities & Stories",
   description:
-    "Explore the therapies, life-skills lessons and creative activities at Star Flower Centre, and read real stories of children making progress.",
+    "Explore the daily programme, Individual Education Plans, parent trainings, home visits and community activities at Star Flower Centre, and read stories of children making progress.",
 };
 
 const activities = [
   {
-    title: "Life-Skills Classroom",
-    icon: Utensils,
+    title: "Individual Education Plans",
+    icon: BookOpenCheck,
     tint: "blue",
-    text: "Brushing teeth, counting coins, crossing a road safely, making a simple meal. Small, practical lessons that add up to independence and dignity.",
+    text: "Every child is assessed and given an IEP with achievable goals across communication, cognition, social-emotional development and physical needs. Teachers work one-to-one with each child and review progress regularly with parents.",
   },
   {
-    title: "Physical Rehabilitation",
-    icon: Accessibility,
-    tint: "green",
-    text: "Daily physiotherapy in our mobility room — stretching, strengthening and gait training tailored to each child, with parents learning exercises to continue at home.",
-  },
-  {
-    title: "Art & Craft Therapy",
-    icon: Palette,
+    title: "Learning Through Play",
+    icon: Blocks,
     tint: "yellow",
-    text: "Paint, clay and weaving give children a language beyond words. It builds fine-motor skills, calms anxiety, and produces the beautiful pieces sold in our craft shop.",
+    text: "Morning circle, songs and stories, chanting the alphabet and counting, arts and crafts, water play and topic-based lessons. Children learn by doing, and by doing it together.",
   },
   {
-    title: "Everyday Routines",
-    icon: Sun,
+    title: "Health, Nutrition & Care",
+    icon: Stethoscope,
+    tint: "green",
+    text: "A morning snack, a nutritious lunch, showers and clean clothes every day. Vaccinations, hygiene routines and referrals to health care are arranged with partners such as SMRU.",
+  },
+  {
+    title: "Home Visits & Early Intervention",
+    icon: Home,
     tint: "red",
-    text: "Morning circle, snack time, music, quiet time. Predictable rhythms help children feel safe, and safety is where learning begins.",
+    text: "Our community liaison identifies children in migrant communities. Teachers and trainers visit homes to show families feeding adaptations, physiotherapy exercises and ways to play, then invite children to the Centre.",
+  },
+  {
+    title: "Parent Training & PTA",
+    icon: Users,
+    tint: "blue",
+    text: "Quarterly trainings on the value of education, types of disabilities, inclusion, child protection, speech and communication, and practical ways to help at home. Parents also join open days and Centre events.",
+  },
+  {
+    title: "Toy Box Scheme",
+    icon: Gift,
+    tint: "yellow",
+    text: "Children borrow a pencil case, exercise book, drawing book, crayons and colouring sheets to take home, so learning continues after the school day ends.",
+  },
+  {
+    title: "Community Trainings",
+    icon: Megaphone,
+    tint: "green",
+    text: "Sessions for community members and other schools on disability, discrimination and life skills, building peer-support networks so families no longer feel alone.",
+  },
+  {
+    title: "Inclusive Education",
+    icon: School,
+    tint: "red",
+    text: "Where it benefits the child, students join a local migrant learning centre with teacher-aide support, and we train those schools so more children with special needs can be welcomed.",
+  },
+  {
+    title: "School Fundraising",
+    icon: Coins,
+    tint: "blue",
+    text: "Parents, teachers and children sell food, drinks and handmade items at community events, raising funds for the Centre and pride in what the children can make.",
   },
 ] as const;
 
 const stories = [
   {
-    name: "Nam's first 'Mama'",
-    tag: "Speech Therapy",
+    name: "From wandering to singing",
+    tag: "Community Voice",
     tint: "red",
-    date: "March 2026",
+    label: "Community elders",
     excerpt:
-      "Nam is six and had never spoken a word. After eight months of play-based speech therapy, she looked up from her puzzle one Tuesday and said 'Mama'. Her mother, who was watching from the doorway, sat down on the floor and cried. Nam now has a vocabulary of over forty words — and a whole lot of opinions.",
+      "Elders in one migrant community told us that before the Centre, the children used to wander about aimlessly, often dirty and with no one to guide them. Now they play constructively, sing songs, count and chant the alphabet, and they look after themselves and each other.",
   },
   {
-    name: "Tee walks to the gate",
-    tag: "Physical Therapy",
+    name: "Both parents can work again",
+    tag: "Family Impact",
     tint: "green",
-    date: "January 2026",
+    label: "Parents",
     excerpt:
-      "Tee has cerebral palsy and arrived at the centre in a pushchair at age seven. His goal was simple: walk to the school gate by himself to meet his grandmother. It took a year of patient work with Khun Prem, a walker, and then quad canes. Last month he did it — and kept going to the corner shop.",
+      "With their children safe and learning at the Centre from Monday to Friday, both parents are now able to go to work. Families tell us this has raised their self-esteem and income, and reduced the stress of caring for a child with a disability alone.",
   },
   {
-    name: "A family that finally talks",
-    tag: "Sign Language",
+    name: "Songkran, hats and concerts",
+    tag: "Celebration",
+    tint: "yellow",
+    label: "Centre events",
+    excerpt:
+      "Water fights at Songkran, a hat-making day, concerts and picnics bring children, parents and teachers together. For many families it is the first time their child has been included in a public celebration.",
+  },
+  {
+    name: "Coffee, biscuits and confidence",
+    tag: "Parent Training",
     tint: "blue",
-    date: "November 2025",
+    label: "Training days",
     excerpt:
-      "Ploy is Deaf. For nine years her parents communicated with her through pointing and guesswork. Both parents joined our Saturday family sign classes. Today the whole family argues about what to have for dinner — in Thai Sign Language. 'We finally know our daughter,' her father says.",
+      "Parents' training days start with coffee and biscuits and end with new skills: how to help a child eat independently, how to communicate without words, how to use positive discipline. Parents who once felt ashamed now speak proudly about their children.",
   },
   {
-    name: "Bank's calm corner",
-    tag: "Sensory Learning",
-    tint: "yellow",
-    date: "September 2025",
-    excerpt:
-      "Bank, who is autistic, found the classroom overwhelming and would often hide. Our sensory room gave him a soft, dim space with weighted blankets and gentle light. He learned to ask for a 'calm break' with a picture card. This term he sat through an entire music lesson — and joined in the drumming.",
-  },
-  {
-    name: "Fon sells her first painting",
-    tag: "Art Therapy",
-    tint: "yellow",
-    date: "July 2025",
-    excerpt:
-      "Fon has limited vision and paints with bold, thick strokes she can feel. At our open-day exhibition a visitor bought her sunflower painting. Fon insisted the money go toward paints for the younger children. She is twelve, and already teaching us about generosity.",
-  },
-  {
-    name: "From our centre to Grade 3",
-    tag: "Inclusion",
+    name: "Exercises at home",
+    tag: "Home Visits",
     tint: "green",
-    date: "May 2025",
+    label: "Early intervention",
     excerpt:
-      "Kao spent two years with us building communication and self-regulation skills. This May he enrolled in a mainstream Grade 3 classroom with a support assistant. We visit monthly, and he tells us proudly about his new friends. Our goal was never to keep children — it was to prepare them.",
+      "On home visits, teachers and volunteer therapists show families simple physiotherapy exercises and how to adapt the home — a supportive seat, a spoon that is easier to hold. Small changes that let a child feed themselves for the first time.",
+  },
+  {
+    name: "Every day, at school",
+    tag: "Inclusion",
+    tint: "red",
+    label: "Daily attendance",
+    excerpt:
+      "Children who were once kept at home, isolated from their communities, now arrive at the Centre every weekday. They share meals, exercise, sing and learn alongside their friends — and some go on to join local migrant learning centres with our support.",
   },
 ] as const;
 
@@ -92,23 +132,27 @@ export default function ActivitiesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Activities & Success Stories"
+        eyebrow="Activities & Stories"
         title="Learning that looks like play, progress that feels like joy"
-        description="Every day at Star Flower Centre blends therapy, creativity and life skills. Here is what a week looks like — and the small victories that keep us going."
+        description="Every day at Star Flower Centre blends individual teaching, play, health care and life skills — and our work continues in homes and communities across Mae Sot."
         tint="green"
       />
 
       {/* Activities */}
       <section className="container-x py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="section-eyebrow">Therapy & Activities</span>
-          <h2 className="section-title">What our children do every week</h2>
+          <span className="section-eyebrow">Our Programme</span>
+          <h2 className="section-title">What we do — at the Centre, at home and in the community</h2>
+          <p className="mt-4 text-slate-600">
+            The Centre is open Monday to Friday, 9:00 – 15:00. Transport, meals and all activities are
+            provided free of charge.
+          </p>
         </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {activities.map((a, i) => (
-            <Reveal key={a.title} delay={i * 0.06}>
-              <article className="card flex h-full flex-col gap-5 sm:flex-row">
-                <ImagePlaceholder label={`Photo: ${a.title}`} tint={a.tint} className="h-40 w-full flex-none rounded-2xl sm:w-44" />
+            <Reveal key={a.title} delay={i * 0.05}>
+              <article className="card flex h-full flex-col gap-5">
+                <ImagePlaceholder label={`Photo: ${a.title}`} tint={a.tint} className="h-40 w-full flex-none rounded-2xl" />
                 <div>
                   <a.icon className="h-7 w-7 text-slate-700" aria-hidden="true" />
                   <h3 className="mt-3 text-lg font-bold">{a.title}</h3>
@@ -120,15 +164,15 @@ export default function ActivitiesPage() {
         </div>
       </section>
 
-      {/* Success stories */}
+      {/* Stories */}
       <section className="bg-amber-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="section-eyebrow">Success Stories</span>
-            <h2 className="section-title">Real children, real progress</h2>
+            <span className="section-eyebrow">Stories From Our Community</span>
+            <h2 className="section-title">Small changes, real progress</h2>
             <p className="mt-4 text-slate-600">
-              Names have been changed and shared with family permission. Each story represents hundreds of
-              quiet hours of effort — by the children most of all.
+              Shared by parents, community elders and teachers. Each story represents hundreds of quiet hours
+              of effort — by the children most of all.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -139,10 +183,7 @@ export default function ActivitiesPage() {
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex items-center justify-between text-xs font-semibold">
                       <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-700">{s.tag}</span>
-                      <span className="flex items-center gap-1 text-slate-500">
-                        <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
-                        {s.date}
-                      </span>
+                      <span className="text-slate-500">{s.label}</span>
                     </div>
                     <h3 className="mt-4 text-lg font-bold">{s.name}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{s.excerpt}</p>

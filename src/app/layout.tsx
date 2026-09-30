@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Star Flower Centre is a charity school in Thailand providing free special education, therapy and love to children with hearing, mobility, speech and sensory needs.",
-  keywords: ["special education", "charity school", "Thailand", "therapy", "sign language", "donate"],
+    "Star Flower Centre is a child-friendly school in Mae Sot, Thailand, providing free special education, care and support to migrant children with special educational needs on the Thai–Myanmar border.",
+  keywords: ["special education", "charity school", "Mae Sot", "Thailand", "migrant children", "inclusive education", "cerebral palsy", "autism", "donate"],
   openGraph: {
     title: site.fullName,
     description: site.tagline,
