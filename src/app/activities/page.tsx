@@ -13,6 +13,7 @@ import {
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import ScrollCue from "@/components/ScrollCue";
 
 export const metadata: Metadata = {
   title: "Activities & Stories",
@@ -162,10 +163,11 @@ export default function ActivitiesPage() {
             </Reveal>
           ))}
         </div>
+        <ScrollCue to="stories" label="Read our stories" className="mt-14" />
       </section>
 
       {/* Stories */}
-      <section className="bg-amber-50/40 py-20">
+      <section id="stories" className="scroll-mt-24 bg-amber-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Stories From Our Community</span>

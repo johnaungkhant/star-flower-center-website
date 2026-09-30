@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import ScrollCue from "@/components/ScrollCue";
 
 const pillars = [
   {
@@ -142,7 +143,7 @@ export default function HomePage() {
           className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-emerald-50/70 blur-3xl"
           aria-hidden="true"
         />
-        <div className="container-x relative grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-2">
+        <div className="container-x relative grid items-center gap-12 pb-8 pt-16 sm:pt-24 lg:grid-cols-2">
           <Reveal>
             <span className="section-eyebrow">A child-friendly school in Mae Sot, Thailand</span>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
@@ -200,10 +201,11 @@ export default function HomePage() {
             </div>
           </Reveal>
         </div>
+        <ScrollCue to="summary" label="Discover our story" className="relative pb-10" />
       </section>
 
       {/* Executive summary */}
-      <section className="container-x py-20">
+      <section id="summary" className="container-x scroll-mt-24 py-20">
         <div className="grid items-start gap-12 lg:grid-cols-5">
           <Reveal className="lg:col-span-3">
             <span className="section-eyebrow">Executive Summary</span>
@@ -253,10 +255,11 @@ export default function HomePage() {
             </div>
           </Reveal>
         </div>
+        <ScrollCue to="vision" label="Our vision & mission" className="mt-14" />
       </section>
 
       {/* Vision & Mission */}
-      <section className="bg-emerald-50/40 py-20">
+      <section id="vision" className="scroll-mt-24 bg-emerald-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Vision & Mission</span>
@@ -300,11 +303,12 @@ export default function HomePage() {
               </article>
             </Reveal>
           </div>
+          <ScrollCue to="principles" label="Our principles" className="mt-14" />
         </div>
       </section>
 
       {/* 4 Principles */}
-      <section className="container-x py-20">
+      <section id="principles" className="container-x scroll-mt-24 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow">Principles That Guide Our Vision</span>
           <h2 className="section-title">Whole-child support, in four colours</h2>
@@ -325,10 +329,11 @@ export default function HomePage() {
             </Reveal>
           ))}
         </div>
+        <ScrollCue to="activities" label="What we do" className="mt-14" />
       </section>
 
       {/* Activities */}
-      <section className="bg-amber-50/40 py-20">
+      <section id="activities" className="scroll-mt-24 bg-amber-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Our Activities</span>
@@ -358,11 +363,12 @@ export default function HomePage() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </Reveal>
+          <ScrollCue to="stories" label="Community stories" className="mt-12" />
         </div>
       </section>
 
       {/* Stories */}
-      <section className="container-x py-20">
+      <section id="stories" className="container-x scroll-mt-24 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow">Stories From Our Community</span>
           <h2 className="section-title">Small changes, big differences</h2>
@@ -387,10 +393,11 @@ export default function HomePage() {
             Read our full story
           </Link>
         </Reveal>
+        <ScrollCue to="support" label="Get involved" className="mt-12" />
       </section>
 
       {/* CTA */}
-      <section className="container-x pb-20">
+      <section id="support" className="container-x scroll-mt-24 pb-20">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2.5rem] bg-star-blue px-8 py-14 text-center text-white shadow-soft sm:px-16">
             <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10" aria-hidden="true" />

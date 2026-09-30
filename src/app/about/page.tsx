@@ -14,6 +14,7 @@ import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import VolunteerForm from "@/components/VolunteerForm";
+import ScrollCue from "@/components/ScrollCue";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -125,43 +126,46 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="container-x grid items-center gap-12 py-20 lg:grid-cols-2">
-        <Reveal>
-          <span className="section-eyebrow">Introduction & Background</span>
-          <h2 className="section-title">Opened in June 2009 for children who had nowhere to learn</h2>
-          <div className="mt-6 space-y-4 leading-relaxed text-slate-600">
-            <p>
-              Star Flower Centre (SFC) opened in June 2009 to serve migrant children with special educational
-              needs in Mae Sot. It was established in partnership with Voluntary Services Overseas (VSO) and
-              World Education (WE) Thailand, with the aim of maximising educational opportunities for migrant
-              children with disabilities in the Mae Sot area.
-            </p>
-            <p>
-              Before the Centre opened, these children were often isolated within migrant communities with no
-              prospect of an education, while their parents struggled to care for them and earn a living at
-              the same time. The first four teachers were trained from scratch in special educational needs
-              and child-friendly teaching methods.
-            </p>
-            <p>
-              The Centre follows UNICEF&apos;s rights-based, child-friendly school framework — a school that is
-              inclusive, healthy and protective for all children, effective with children, and involved with
-              families and communities. Since 2015 the Centre has been managed and led by the Burmese Migrant
-              Workers&apos; Education Committee (BMWEC), and today it is the only school along the Thai–Myanmar
-              border available to children with specialist needs from migrant communities.
-            </p>
-          </div>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <ImagePlaceholder
-            label="Photo: Star Flower Centre, Mae Sot"
-            tint="blue"
-            className="aspect-[4/3] w-full rounded-[2rem]"
-          />
-        </Reveal>
+      <section id="story" className="container-x scroll-mt-24 py-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <Reveal>
+            <span className="section-eyebrow">Introduction & Background</span>
+            <h2 className="section-title">Opened in June 2009 for children who had nowhere to learn</h2>
+            <div className="mt-6 space-y-4 leading-relaxed text-slate-600">
+              <p>
+                Star Flower Centre (SFC) opened in June 2009 to serve migrant children with special educational
+                needs in Mae Sot. It was established in partnership with Voluntary Services Overseas (VSO) and
+                World Education (WE) Thailand, with the aim of maximising educational opportunities for migrant
+                children with disabilities in the Mae Sot area.
+              </p>
+              <p>
+                Before the Centre opened, these children were often isolated within migrant communities with no
+                prospect of an education, while their parents struggled to care for them and earn a living at
+                the same time. The first four teachers were trained from scratch in special educational needs
+                and child-friendly teaching methods.
+              </p>
+              <p>
+                The Centre follows UNICEF&apos;s rights-based, child-friendly school framework — a school that is
+                inclusive, healthy and protective for all children, effective with children, and involved with
+                families and communities. Since 2015 the Centre has been managed and led by the Burmese Migrant
+                Workers&apos; Education Committee (BMWEC), and today it is the only school along the Thai–Myanmar
+                border available to children with specialist needs from migrant communities.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <ImagePlaceholder
+              label="Photo: Star Flower Centre, Mae Sot"
+              tint="blue"
+              className="aspect-[4/3] w-full rounded-[2rem]"
+            />
+          </Reveal>
+        </div>
+        <ScrollCue to="vision" label="Our vision" className="mt-14" />
       </section>
 
       {/* Vision & Principles */}
-      <section className="bg-blue-50/40 py-20">
+      <section id="vision" className="scroll-mt-24 bg-blue-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-3xl text-center">
             <span className="section-eyebrow">Our Vision</span>
@@ -195,11 +199,12 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
+          <ScrollCue to="goals" label="Our goals" className="mt-14" />
         </div>
       </section>
 
       {/* Goals & Objectives */}
-      <section className="container-x py-20">
+      <section id="goals" className="container-x scroll-mt-24 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow">Goals & Objectives</span>
           <h2 className="section-title">What we set out to achieve</h2>
@@ -223,10 +228,11 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
+        <ScrollCue to="who-we-serve" label="Who we serve" className="mt-14" />
       </section>
 
       {/* Who we serve */}
-      <section className="bg-amber-50/40 py-20">
+      <section id="who-we-serve" className="scroll-mt-24 bg-amber-50/40 py-20">
         <div className="container-x grid items-start gap-12 lg:grid-cols-2">
           <Reveal>
             <span className="section-eyebrow">Who We Serve</span>
@@ -264,10 +270,11 @@ export default function AboutPage() {
             </div>
           </Reveal>
         </div>
+        <ScrollCue to="partners" label="Our partners" className="mt-14" />
       </section>
 
       {/* Partners */}
-      <section className="container-x py-20">
+      <section id="partners" className="container-x scroll-mt-24 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow">Our Partners</span>
           <h2 className="section-title">Organisations that make the Centre possible</h2>
@@ -284,10 +291,11 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
+        <ScrollCue to="team" label="Meet the team" className="mt-14" />
       </section>
 
       {/* Team */}
-      <section className="bg-emerald-50/40 py-20">
+      <section id="team" className="scroll-mt-24 bg-emerald-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Our Team</span>
@@ -309,11 +317,12 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
+          <ScrollCue to="volunteer" label="Volunteer with us" className="mt-14" />
         </div>
       </section>
 
       {/* Volunteer callout + form */}
-      <section id="volunteer" className="container-x py-20">
+      <section id="volunteer" className="container-x scroll-mt-24 py-20">
         <div className="grid gap-10 lg:grid-cols-5">
           <Reveal className="lg:col-span-2">
             <div className="card h-full border-star-green/30 bg-white">
