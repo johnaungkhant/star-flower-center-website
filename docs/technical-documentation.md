@@ -378,16 +378,16 @@ const team = [
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
     tint: "blue",
-    image: null,
+    image: "/Naw-Thoo-Mwe-Paw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
     role: "Curriculum Development Coordinator & Finance",
     note: "For the glory of God to be revealed through our work with children and families.",
     tint: "green",
-    image: null,
+    image: "/Saw-Moo-Kapaw-Say-Reh.jpg",
   },
-  // Every team member has image: null until their photo file is added.
+  // The remaining team members each use their matching JPG in public/.
 ] as const;
 ```
 
@@ -430,17 +430,21 @@ The render block is here:
 
 The team section is rendered with `team.map((t, i) => ...)`. For each pass through the array, `t` is one complete team object. That is why `t.name`, `t.role`, `t.note`, and `t.image` all belong to the same person. Add an `image` property to every object; do not create one separate image list, because its order could stop matching the team members.
 
-1. Add each photo file inside the project's `public/images/team/` folder. For example:
+1. The current staff photos are saved directly in the project's `public/` folder. Their names include:
 
 ```text
 public/
-  images/
-    team/
-      naw-thoo-mwe-paw.jpg
-      saw-moo-kapaw-say-reh.jpg
+  Naw-Thoo-Mwe-Paw.jpg
+  Saw-Moo-Kapaw-Say-Reh.jpg
+  Saw-Ronal-Soe.jpg
+  Saw-Taw-Nay-Moo.jpg
+  Saw-Poe-Dah.jpg
+  Saw-Hay-Blut.jpg
+  Naw-April-Paw.jpg
+  Chit-Poe-Pwint-Phyu.jpg
 ```
 
-2. Put each file's public URL path in the matching team object. The path starts with `/` and omits `public`; for example, `public/images/team/naw-thoo-mwe-paw.jpg` is referenced as `/images/team/naw-thoo-mwe-paw.jpg`. Until a photo is available, keep that person's `image` value as `null`.
+2. Put each file's public URL path in the matching team object. The path starts with `/` and omits `public`; for example, `public/Naw-Thoo-Mwe-Paw.jpg` is referenced as `/Naw-Thoo-Mwe-Paw.jpg`. Match spelling, capitalization, and extension exactly. If a future team member has no photo yet, use `image: null`.
 
 ```ts
 const team = [
@@ -448,13 +452,13 @@ const team = [
     name: "Naw Thoo Mwe Paw",
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
-    image: null, // Change to "/images/team/naw-thoo-mwe-paw.jpg" after adding that file.
+    image: "/Naw-Thoo-Mwe-Paw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
     role: "Curriculum Development Coordinator & Finance",
     note: "For the glory of God to be revealed through our work with children and families.",
-    image: null, // Change to "/images/team/saw-moo-kapaw-say-reh.jpg" after adding that file.
+    image: "/Saw-Moo-Kapaw-Say-Reh.jpg",
   },
   // Continue with one matching image path for every team member.
 ] as const;
@@ -486,7 +490,7 @@ import Image from "next/image";
 
 For a member with a real photo, `label` and `tint` are not used for that displayed photo. Keep `tint` because it controls the fallback placeholder whenever `image` is `null`. Keep the `ImagePlaceholder` import because other About page sections also use placeholders, such as the story and partner sections.
 
-**Adding another team member:** add their photo under `public/images/team/`, then add one object to `team` with that photo's matching `image` path plus their `name`, `role`, and `note`. The `.map()` automatically creates the extra card; no separate image JSX is needed for each person.
+**Adding another team member:** add their photo under `public/`, then add one object to `team` with that photo's matching root path (for example, `/New-Staff-Name.jpg`) plus their `name`, `role`, and `note`. Set `image: null` until the file is available. The `.map()` automatically creates the extra card; no separate image JSX is needed for each person.
 
 **Replacing a photo:** replace the file while keeping its filename, or change that person's `image` value to the new path. Filenames and extensions must match exactly, including letter case, because the deployed site runs on a case-sensitive filesystem.
 
@@ -767,7 +771,7 @@ To update the brand image:
 - or change the `src` path to a different asset
 
 ### C. Replace placeholder image with real photo
-For an array-driven card section such as the team, store each image path on the corresponding data object. A path under `public/` is used in code without the `public` prefix. For example, `public/images/team/person.jpg` becomes `/images/team/person.jpg`.
+For an array-driven card section such as the team, store each image path on the corresponding data object. A path under `public/` is used in code without the `public` prefix. For example, `public/Naw-Thoo-Mwe-Paw.jpg` becomes `/Naw-Thoo-Mwe-Paw.jpg`.
 
 The team pattern checks for an image path and falls back to the placeholder when the value is `null`:
 ```tsx
@@ -800,7 +804,7 @@ const team = [
 ### Team member photos
 File: `src/app/about/page.tsx`
 
-Put each photo in `public/images/team/`, then set that person's `image` property to the corresponding URL path beginning with `/images/team/`. Until the file exists, leave `image: null`; the render will show the placeholder. The render uses the current array item's path:
+Put each photo in `public/`, then set that person's `image` property to the corresponding URL path beginning with `/`. For example, `public/Naw-Thoo-Mwe-Paw.jpg` uses `image: "/Naw-Thoo-Mwe-Paw.jpg"`. Until a file exists, leave `image: null`; the render will show the placeholder. The render uses the current array item's path:
 ```tsx
 {t.image ? (
   <Image src={t.image} alt={`Photo of ${t.name}`} width={600} height={400} className="h-40 w-full rounded-2xl object-cover" />
