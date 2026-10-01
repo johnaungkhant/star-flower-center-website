@@ -343,8 +343,8 @@ export default function AboutPage() {
             <span className="section-eyebrow">Our Team</span>
             <h2 className="section-title">The people behind every small victory</h2>
             <p className="mt-4 text-slate-600">
-              The current staff team includes teachers, coordinators, a driver, a health focal and support staff
-              who work together to create a safe, caring and learning-focused environment for every child.
+              A small team of teachers, a staff trainer, a community liaison, care staff and parents — supported
+              by volunteers and specialist therapists whenever they are available.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
