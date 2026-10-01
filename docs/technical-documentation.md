@@ -378,7 +378,7 @@ const team = [
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
     tint: "blue",
-    image: "/Naw-Thoo-Mwe-Paw.jpg",
+    image: "/naw-thoo-mwe-paw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
@@ -409,7 +409,7 @@ The render block is here:
           alt={`Photo of ${t.name}`}
           width={600}
           height={400}
-          className="h-40 w-full rounded-2xl object-cover"
+          className="h-64 w-full rounded-2xl border border-slate-200 bg-white object-contain"
         />
       ) : (
         <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
@@ -434,7 +434,7 @@ The team section is rendered with `team.map((t, i) => ...)`. For each pass throu
 
 ```text
 public/
-  Naw-Thoo-Mwe-Paw.jpg
+  naw-thoo-mwe-paw.jpg
   Saw-Moo-Kapaw-Say-Reh.jpg
   Saw-Ronal-Soe.jpg
   Saw-Taw-Nay-Moo.jpg
@@ -444,7 +444,7 @@ public/
   Chit-Poe-Pwint-Phyu.jpg
 ```
 
-2. Put each file's public URL path in the matching team object. The path starts with `/` and omits `public`; for example, `public/Naw-Thoo-Mwe-Paw.jpg` is referenced as `/Naw-Thoo-Mwe-Paw.jpg`. Match spelling, capitalization, and extension exactly. If a future team member has no photo yet, use `image: null`.
+2. Put each file's public URL path in the matching team object. The path starts with `/` and omits `public`; for example, the tracked file `public/naw-thoo-mwe-paw.jpg` is referenced as `/naw-thoo-mwe-paw.jpg`. Match spelling, capitalization, and extension exactly; Vercel's Linux filesystem is case-sensitive. If a future team member has no photo yet, use `image: null`.
 
 ```ts
 const team = [
@@ -452,7 +452,7 @@ const team = [
     name: "Naw Thoo Mwe Paw",
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
-    image: "/Naw-Thoo-Mwe-Paw.jpg",
+    image: "/naw-thoo-mwe-paw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
@@ -479,7 +479,7 @@ import Image from "next/image";
     alt={`Photo of ${t.name}`}
     width={600}
     height={400}
-    className="h-40 w-full rounded-2xl object-cover"
+    className="h-64 w-full rounded-2xl border border-slate-200 bg-white object-contain"
   />
 ) : (
   <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
@@ -771,12 +771,12 @@ To update the brand image:
 - or change the `src` path to a different asset
 
 ### C. Replace placeholder image with real photo
-For an array-driven card section such as the team, store each image path on the corresponding data object. A path under `public/` is used in code without the `public` prefix. For example, `public/Naw-Thoo-Mwe-Paw.jpg` becomes `/Naw-Thoo-Mwe-Paw.jpg`.
+For an array-driven card section such as the team, store each image path on the corresponding data object. A path under `public/` is used in code without the `public` prefix. For example, `public/naw-thoo-mwe-paw.jpg` becomes `/naw-thoo-mwe-paw.jpg`.
 
 The team pattern checks for an image path and falls back to the placeholder when the value is `null`:
 ```tsx
 {t.image ? (
-  <Image src={t.image} alt={`Photo of ${t.name}`} width={600} height={400} className="h-40 w-full rounded-2xl object-cover" />
+  <Image src={t.image} alt={`Photo of ${t.name}`} width={600} height={400} className="h-64 w-full rounded-2xl border border-slate-200 bg-white object-contain" />
 ) : (
   <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
 )}
@@ -804,10 +804,10 @@ const team = [
 ### Team member photos
 File: `src/app/about/page.tsx`
 
-Put each photo in `public/`, then set that person's `image` property to the corresponding URL path beginning with `/`. For example, `public/Naw-Thoo-Mwe-Paw.jpg` uses `image: "/Naw-Thoo-Mwe-Paw.jpg"`. Until a file exists, leave `image: null`; the render will show the placeholder. The render uses the current array item's path:
+Put each photo in `public/`, then set that person's `image` property to the corresponding URL path beginning with `/`. For example, the tracked file `public/naw-thoo-mwe-paw.jpg` uses `image: "/naw-thoo-mwe-paw.jpg"`. Until a file exists, leave `image: null`; the render will show the placeholder. The render uses the current array item's path:
 ```tsx
 {t.image ? (
-  <Image src={t.image} alt={`Photo of ${t.name}`} width={600} height={400} className="h-40 w-full rounded-2xl object-cover" />
+  <Image src={t.image} alt={`Photo of ${t.name}`} width={600} height={400} className="h-64 w-full rounded-2xl border border-slate-200 bg-white object-contain" />
 ) : (
   <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
 )}

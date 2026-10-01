@@ -122,7 +122,7 @@ const team: TeamMember[] = [
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
     tint: "blue",
-    image: "/Naw-Thoo-Mwe-Paw.jpg",
+    image: "/naw-thoo-mwe-paw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
@@ -374,7 +374,7 @@ export default function AboutPage() {
                       alt={`Photo of ${t.name}`}
                       width={600}
                       height={400}
-                      className="h-40 w-full rounded-2xl object-cover"
+                      className="h-64 w-full rounded-2xl border border-slate-200 bg-white object-contain"
                     />
                   ) : (
                     <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
