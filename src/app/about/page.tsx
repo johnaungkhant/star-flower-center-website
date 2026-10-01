@@ -108,12 +108,54 @@ const admission = [
 ];
 
 const team = [
-  { name: "Teachers", role: "Special educational needs teachers", note: "Trained from scratch in SEN and child-friendly methods across 22 topics — from IEPs and behaviour management to physiotherapy exercises and child safeguarding.", tint: "blue" },
-  { name: "Staff Trainer", role: "Coaching & mentoring", note: "Leads teacher training, helps develop each child's IEP and joins home visits with families.", tint: "green" },
-  { name: "Community Liaison & Driver", role: "Outreach and early intervention", note: "Identifies children in migrant communities, coordinates home visits and brings children safely to and from the Centre.", tint: "red" },
-  { name: "Cook & Care Staff", role: "Nutrition and hygiene", note: "Prepare the daily snack and nutritious lunch and help children shower and change into clean clothes.", tint: "yellow" },
-  { name: "Parents & PTA", role: "First and most important educators", note: "Take part in quarterly trainings, fundraising and Centre events, and help shape their child's learning plan.", tint: "blue" },
-  { name: "Volunteers", role: "Specialists and helpers", note: "Physiotherapists, occupational and speech therapists and other volunteers who join home visits and classroom activities.", tint: "green" },
+  {
+    name: "Naw Thoo Mwe Paw",
+    role: "Principal",
+    note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
+    tint: "blue",
+  },
+  {
+    name: "Saw Moo Kapaw Say Reh",
+    role: "Curriculum Development Coordinator & Finance",
+    note: "For the glory of God to be revealed through our work with children and families.",
+    tint: "green",
+  },
+  {
+    name: "Saw Ronal Soe",
+    role: "Driver",
+    note: "Caring for the least among us is caring for God.",
+    tint: "red",
+  },
+  {
+    name: "Saw Taw Nay Moo",
+    role: "Teacher Assistant",
+    note: "I am a former student of this school, and I am grateful to return and support the children here.",
+    tint: "yellow",
+  },
+  {
+    name: "Saw Poe Dah",
+    role: "Teacher",
+    note: "I chose to work with Star Flower School to support children with special needs and help them grow in confidence and skills.",
+    tint: "blue",
+  },
+  {
+    name: "Saw Hay Blut",
+    role: "Teacher",
+    note: "I am passionate about helping children and supporting their education and development.",
+    tint: "green",
+  },
+  {
+    name: "Naw April Paw",
+    role: "Health Teacher (Focal)",
+    note: "To love and care for children with special needs through systematic health record keeping, all for the glory of God.",
+    tint: "yellow",
+  },
+  {
+    name: "Chit Poe Pwint Phyu",
+    role: "Teacher",
+    note: "I want to better understand children with special needs, improve my skills and learn how to support them respectfully and effectively.",
+    tint: "red",
+  },
 ] as const;
 
 export default function AboutPage() {
@@ -301,8 +343,8 @@ export default function AboutPage() {
             <span className="section-eyebrow">Our Team</span>
             <h2 className="section-title">The people behind every small victory</h2>
             <p className="mt-4 text-slate-600">
-              A small team of teachers, a staff trainer, a community liaison, care staff and parents — supported
-              by volunteers and specialist therapists whenever they are available.
+              The current staff team includes teachers, coordinators, a driver, a health focal and support staff
+              who work together to create a safe, caring and learning-focused environment for every child.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
