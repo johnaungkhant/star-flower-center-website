@@ -108,7 +108,15 @@ const admission = [
   { label: "Learning Difficulties", note: "up to 18 years" },
 ];
 
-const team = [
+type TeamMember = {
+  name: string;
+  role: string;
+  note: string;
+  tint: "blue" | "green" | "red" | "yellow";
+  image: string | null;
+};
+
+const team: TeamMember[] = [
   {
     name: "Naw Thoo Mwe Paw",
     role: "Principal",
@@ -165,7 +173,7 @@ const team = [
     tint: "red",
     image: "/images/team/chit-poe-pwint-pyu.jpg",
   },
-] as const;
+];
 
 export default function AboutPage() {
   return (
