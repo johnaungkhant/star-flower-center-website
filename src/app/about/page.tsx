@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   BookOpenCheck,
   Compass,
@@ -113,48 +114,56 @@ const team = [
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
     tint: "blue",
+    image: null,
   },
   {
     name: "Saw Moo Kapaw Say Reh",
     role: "Curriculum Development Coordinator & Finance",
     note: "For the glory of God to be revealed through our work with children and families.",
     tint: "green",
+    image: null,
   },
   {
     name: "Saw Ronal Soe",
     role: "Driver",
     note: "Caring for the least among us is caring for God.",
     tint: "red",
+    image: null,
   },
   {
     name: "Saw Taw Nay Moo",
     role: "Teacher Assistant",
     note: "I am a former student of this school, and I am grateful to return and support the children here.",
     tint: "yellow",
+    image: null,
   },
   {
     name: "Saw Poe Dah",
     role: "Teacher",
     note: "I chose to work with Star Flower School to support children with special needs and help them grow in confidence and skills.",
     tint: "blue",
+    image: null,
   },
   {
     name: "Saw Hay Blut",
     role: "Teacher",
     note: "I am passionate about helping children and supporting their education and development.",
     tint: "green",
+    image: null,
   },
   {
     name: "Naw April Paw",
     role: "Health Teacher (Focal)",
     note: "To love and care for children with special needs through systematic health record keeping, all for the glory of God.",
     tint: "yellow",
+    image: null,
   },
   {
     name: "Chit Poe Pwint Phyu",
     role: "Teacher",
     note: "I want to better understand children with special needs, improve my skills and learn how to support them respectfully and effectively.",
     tint: "red",
+    image: null,
   },
 ] as const;
 
@@ -351,7 +360,17 @@ export default function AboutPage() {
             {team.map((t, i) => (
               <Reveal key={t.name} delay={i * 0.05}>
                 <article className="card h-full bg-white">
-                  <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
+                  {t.image ? (
+                    <Image
+                      src={t.image}
+                      alt={`Photo of ${t.name}`}
+                      width={600}
+                      height={400}
+                      className="h-40 w-full rounded-2xl object-cover"
+                    />
+                  ) : (
+                    <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
+                  )}
                   <h3 className="mt-4 text-lg font-bold">{t.name}</h3>
                   <p className="text-sm font-semibold text-star-blue">{t.role}</p>
                   <p className="mt-2 text-sm text-slate-600">{t.note}</p>
