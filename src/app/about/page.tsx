@@ -213,10 +213,12 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <ImagePlaceholder
-              label="Photo: Star Flower Centre, Mae Sot"
-              tint="blue"
-              className="aspect-[4/3] w-full rounded-[2rem]"
+            <Image
+              src="/sbi.jpg"
+              alt="The Star Flower Centre building in Mae Sot, Thailand"
+              width={600}
+              height={400}
+              className="rounded-2xl border border-slate-200 bg-white object-cover"
             />
           </Reveal>
         </div>
