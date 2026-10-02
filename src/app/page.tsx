@@ -79,56 +79,7 @@ const missionPoints = [
   "Advocate for the rights of children with disabilities in the wider community.",
 ];
 
-const activities = [
-  {
-    title: "Individual Education Plans",
-    icon: ClipboardList,
-    tint: "blue",
-    text: "Each child has an IEP developed with teachers, the staff trainer, parents and specialists, delivered through one-to-one Work-with-Teacher sessions every morning.",
-  },
-  {
-    title: "Learning Through Play",
-    icon: Palette,
-    tint: "yellow",
-    text: "Art, music, role play and topic sessions such as “Will it Float or Sink?” — followed by outdoor play with sand, swings, football and badminton.",
-  },
-  {
-    title: "Health, Nutrition & Care",
-    icon: Stethoscope,
-    tint: "green",
-    text: "A mid-morning snack and nutritious lunch, daily vitamins, showers and clean clothes, health checks, vaccination programmes and clinic referrals when needed.",
-  },
-  {
-    title: "Home Visits & Early Intervention",
-    icon: Home,
-    tint: "red",
-    text: "Our community liaison identifies children in migrant communities. Teachers visit homes to show families how to support development through exercises, play and simple adaptations.",
-  },
-] as const;
 
-const stories = [
-  {
-    name: "“They sing, count and chant the alphabet”",
-    tag: "Community Voices",
-    tint: "green",
-    excerpt:
-      "Community elders told us that before the Centre opened, the children used to wander the community and come home dirty. Now they play constructively with the other children, sing songs, count, and chant the alphabet.",
-  },
-  {
-    name: "Both parents can go to work",
-    tag: "Family Impact",
-    tint: "blue",
-    excerpt:
-      "With their children safe, fed and learning at the Centre, both parents are able to work and support the family. Parents' training days, picnics and concerts have raised the self-esteem of parents and children alike — our students are now considered “special” in the very best sense.",
-  },
-  {
-    name: "Songkran, hats and concerts",
-    tag: "Parents & Children Together",
-    tint: "yellow",
-    excerpt:
-      "Families join in throughout the year — a Songkran water fight, Hat Making days, concerts and picnics. Alongside the fun, parents learn about health and hygiene, behaviour management, and how to play with their children at home.",
-  },
-] as const;
 
 export default function HomePage() {
   return (
