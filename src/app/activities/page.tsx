@@ -1,19 +1,108 @@
-import type { Metadata } from "next";
-import {
-  Blocks,
-  BookOpenCheck,
-  Coins,
-  Gift,
-  Home,
-  Megaphone,
-  School,
-  Stethoscope,
-  Users,
-} from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollCue from "@/components/ScrollCue";
+
+type Metadata = {
+  title?: string;
+  description?: string;
+  [key: string]: unknown;
+};
+
+type IconProps = {
+  className?: string;
+  [key: string]: any;
+};
+
+const BookOpenCheck = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v15.5H5.5A2.5 2.5 0 0 0 3 21V5.5Z" />
+    <path d="M7 7h7" />
+    <path d="M7 11h10" />
+    <path d="M9 17l2 2 4-5" />
+  </svg>
+);
+
+const Blocks = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M3 7.5 12 3l9 4.5-9 4.5L3 7.5Z" />
+    <path d="M3 12.5 12 17l9-4.5" />
+    <path d="M3 17.5 12 22l9-4.5" />
+  </svg>
+);
+
+const Stethoscope = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M5 3v8a7 7 0 0 0 14 0V3" />
+    <path d="M9 3v8" />
+    <path d="M15 3v8" />
+    <path d="M8 18a4 4 0 1 0 8 0v-2" />
+    <path d="M8 18h8" />
+  </svg>
+);
+
+const Home = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M3 10.5 12 3l9 7.5" />
+    <path d="M5 9.5V20h14V9.5" />
+    <path d="M9 20v-6h6v6" />
+  </svg>
+);
+
+const Users = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M16 19v-1a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v1" />
+    <circle cx="10" cy="7" r="3" />
+    <path d="M20 19v-1a4 4 0 0 0-3-3.87" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  </svg>
+);
+
+const Gift = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M20 8H4v12h16V8Z" />
+    <path d="M12 8v12" />
+    <path d="M4 12h16" />
+    <path d="M12 8s-2-6-6-6c-1.5 0-2 1.5-2 3 0 2 1.5 3 4 3h4Z" />
+    <path d="M12 8s2-6 6-6c1.5 0 2 1.5 2 3 0 2-1.5 3-4 3h-4Z" />
+  </svg>
+);
+
+const Megaphone = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M3 11v2l12 4V7L3 11Z" />
+    <path d="M15 9v6" />
+    <path d="M18 10.5v3" />
+    <path d="M20 9.5v5" />
+    <path d="M3 13h2" />
+  </svg>
+);
+
+const School = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <path d="M3 10.5 12 5l9 5.5-9 5.5-9-5.5Z" />
+    <path d="M7 12.5v5.5l5 3 5-3v-5.5" />
+    <path d="M12 5v11" />
+  </svg>
+);
+
+const Coins = ({ className, ...props }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+    <circle cx="8" cy="9" r="5" />
+    <path d="M11 9h9" />
+    <path d="M11 13h9" />
+    <circle cx="15" cy="17" r="4" />
+    <path d="M18.5 17h2.5" />
+  </svg>
+);
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
 
 export const metadata: Metadata = {
   title: "Activities & Stories",
