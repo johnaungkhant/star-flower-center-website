@@ -93,7 +93,7 @@ const activities: Activity[] = [
     icon: Coins,
     tint: "blue",
     text: "Parents, teachers and children sell food, drinks and handmade items at community events, raising funds for the Centre and pride in what the children can make.",
-    image: "/fr.jpg",
+    image: "/fr.png",
   },
    {
     title: "Life Skills & Vocational Training",
