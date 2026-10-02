@@ -73,32 +73,44 @@ const goals = [
   },
 ];
 
-const partners = [
+type Partner = {
+  name: string;
+  full: string;
+  text: string;
+  tint: "blue" | "green" | "yellow" | "red";
+  image: string | null;
+};
+
+const partners: Partner[] = [
   {
     name: "BMWEC",
     full: "Burmese Migrant Workers' Education Committee",
     text: "A community-based organisation that has managed and led Star Flower Centre since 2015. BMWEC's advocacy helped Burmese migrant learning centres gain recognition from the Thai Ministry of Education, and our teachers hold MOE teacher cards.",
     tint: "blue",
+    image: null,
   },
   {
     name: "VSO",
     full: "Voluntary Services Overseas",
     text: "An international development agency founded in 1958. Through its Education for All programme in Thailand, VSO co-founded the Centre and placed a volunteer special-needs adviser to train our first teachers.",
     tint: "green",
+    image: null,
   },
   {
     name: "World Education",
     full: "World Education Thailand",
     text: "Co-founded the Centre and supported it through the SHIELD project, working with the Ministry of Education and community organisations to improve education for migrant children.",
     tint: "yellow",
+    image: null,
   },
   {
     name: "SMRU",
     full: "Shoklo Malaria Research Unit",
     text: "Partners with the Centre on vaccination programmes and health care for our students.",
     tint: "red",
+    image: null,
   },
-] as const;
+];
 
 const admission = [
   { label: "Autism", note: "up to 18 years" },
@@ -122,7 +134,7 @@ const team: TeamMember[] = [
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
     tint: "blue",
-    image: "/naw-thoo-mwe-paw.jpg",
+    image: "/Naw-Thoo-Mwe-Paw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
@@ -189,26 +201,35 @@ export default function AboutPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <span className="section-eyebrow">Introduction & Background</span>
-            <h2 className="section-title">Opened in June 2009 for children who had nowhere to learn</h2>
+            <h2 className="section-title">
+              Opened in June 2009 for children who had nowhere to learn
+            </h2>
             <div className="mt-6 space-y-4 leading-relaxed text-slate-600">
               <p>
-                Star Flower Centre (SFC) opened in June 2009 to serve migrant children with special educational
-                needs in Mae Sot. It was established in partnership with Voluntary Services Overseas (VSO) and
-                World Education (WE) Thailand, with the aim of maximising educational opportunities for migrant
-                children with disabilities in the Mae Sot area.
+                Star Flower Centre (SFC) opened in June 2009 to serve migrant
+                children with special educational needs in Mae Sot. It was
+                established in partnership with Voluntary Services Overseas
+                (VSO) and World Education (WE) Thailand, with the aim of
+                maximising educational opportunities for migrant children with
+                disabilities in the Mae Sot area.
               </p>
               <p>
-                Before the Centre opened, these children were often isolated within migrant communities with no
-                prospect of an education, while their parents struggled to care for them and earn a living at
-                the same time. The first four teachers were trained from scratch in special educational needs
-                and child-friendly teaching methods.
+                Before the Centre opened, these children were often isolated
+                within migrant communities with no prospect of an education,
+                while their parents struggled to care for them and earn a
+                living at the same time. The first four teachers were trained
+                from scratch in special educational needs and child-friendly
+                teaching methods.
               </p>
               <p>
-                The Centre follows UNICEF&apos;s rights-based, child-friendly school framework — a school that is
-                inclusive, healthy and protective for all children, effective with children, and involved with
-                families and communities. Since 2015 the Centre has been managed and led by the Burmese Migrant
-                Workers&apos; Education Committee (BMWEC), and today it is the only school along the Thai–Myanmar
-                border available to children with specialist needs from migrant communities.
+                The Centre follows UNICEF&apos;s rights-based, child-friendly
+                school framework — a school that is inclusive, healthy and
+                protective for all children, effective with children, and
+                involved with families and communities. Since 2015 the Centre
+                has been managed and led by the Burmese Migrant Workers&apos;
+                Education Committee (BMWEC), and today it is the only school
+                along the Thai–Myanmar border available to children with
+                specialist needs from migrant communities.
               </p>
             </div>
           </Reveal>
@@ -233,29 +254,43 @@ export default function AboutPage() {
             <h2 className="section-title">Work, learn and play together</h2>
             <blockquote className="mt-5 space-y-3 text-lg text-slate-600">
               <p>
-                <Compass className="mr-2 inline h-6 w-6 text-star-blue" aria-hidden="true" />
-                We believe that all children should have access to a child-friendly school, where their
-                individual needs are catered for and where they are able to participate in a full program of
+                <Compass
+                  className="mr-2 inline h-6 w-6 text-star-blue"
+                  aria-hidden="true"
+                />
+                We believe that all children should have access to a
+                child-friendly school, where their individual needs are catered
+                for and where they are able to participate in a full program of
                 activities and learning opportunities.
               </p>
               <p>
-                We believe all students should be encouraged to work, learn, and play together, which will
-                enable students to gain confidence, raise their self-esteem, and realize their full potential
-                as productive members of society.
+                We believe all students should be encouraged to work, learn, and
+                play together, which will enable students to gain confidence,
+                raise their self-esteem, and realize their full potential as
+                productive members of society.
               </p>
             </blockquote>
           </Reveal>
           <Reveal className="mx-auto mt-14 max-w-2xl text-center">
-            <span className="section-eyebrow">Principles That Guide Our Vision</span>
-            <h3 className="text-2xl font-extrabold">Four commitments behind every decision</h3>
+            <span className="section-eyebrow">
+              Principles That Guide Our Vision
+            </span>
+            <h3 className="text-2xl font-extrabold">
+              Four commitments behind every decision
+            </h3>
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {principles.map((m, i) => (
               <Reveal key={m.title} delay={i * 0.06}>
                 <article className={`card h-full ${m.bg}`}>
-                  <m.icon className={`h-8 w-8 ${m.color}`} aria-hidden="true" />
+                  <m.icon
+                    className={`h-8 w-8 ${m.color}`}
+                    aria-hidden="true"
+                  />
                   <h3 className="mt-4 text-lg font-bold">{m.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{m.text}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {m.text}
+                  </p>
                 </article>
               </Reveal>
             ))}
@@ -270,8 +305,9 @@ export default function AboutPage() {
           <span className="section-eyebrow">Goals & Objectives</span>
           <h2 className="section-title">What we set out to achieve</h2>
           <p className="mt-4 text-slate-600">
-            Our key approach is to keep the child — and his or her rights, well-being and educational
-            opportunities — at the centre of all goals, objectives and activities.
+            Our key approach is to keep the child — and his or her rights,
+            well-being and educational opportunities — at the centre of all
+            goals, objectives and activities.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -283,7 +319,9 @@ export default function AboutPage() {
                 </span>
                 <div>
                   <h3 className="text-lg font-bold">{g.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{g.text}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {g.text}
+                  </p>
                 </div>
               </article>
             </Reveal>
@@ -293,21 +331,29 @@ export default function AboutPage() {
       </section>
 
       {/* Who we serve */}
-      <section id="who-we-serve" className="scroll-mt-24 bg-amber-50/40 py-20">
+      <section
+        id="who-we-serve"
+        className="scroll-mt-24 bg-amber-50/40 py-20"
+      >
         <div className="container-x grid items-start gap-12 lg:grid-cols-2">
           <Reveal>
             <span className="section-eyebrow">Who We Serve</span>
             <h2 className="section-title">Admission and priority</h2>
             <p className="mt-6 leading-relaxed text-slate-600">
-              Most of our students live with cerebral palsy; others have autism, ADHD, Down syndrome or
-              learning difficulties. When a place opens, priority goes to the most vulnerable child living in
-              an accessible location — first children we already know through home visits, then children
-              referred by the community and other schools. Families of children with severe needs may be asked
-              to accompany their child at the Centre.
+              Most of our students live with cerebral palsy; others have
+              autism, ADHD, Down syndrome or learning difficulties. When a
+              place opens, priority goes to the most vulnerable child living in
+              an accessible location — first children we already know through
+              home visits, then children referred by the community and other
+              schools. Families of children with severe needs may be asked to
+              accompany their child at the Centre.
             </p>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {admission.map((a) => (
-                <li key={a.label} className="rounded-2xl bg-white px-4 py-3 ring-1 ring-slate-100">
+                <li
+                  key={a.label}
+                  className="rounded-2xl bg-white px-4 py-3 ring-1 ring-slate-100"
+                >
                   <p className="font-bold text-slate-900">{a.label}</p>
                   <p className="text-xs text-slate-500">{a.note}</p>
                 </li>
@@ -316,17 +362,44 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="card bg-white">
-              <Lightbulb className="h-8 w-8 text-star-yellow" aria-hidden="true" />
+              <Lightbulb
+                className="h-8 w-8 text-star-yellow"
+                aria-hidden="true"
+              />
               <h3 className="mt-4 text-xl font-bold">Four learning modules</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Each child&apos;s IEP draws on four modules delivered by a multidisciplinary team with the
-                family closely involved.
+                Each child&apos;s IEP draws on four modules delivered by a
+                multidisciplinary team with the family closely involved.
               </p>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-600">
-                <li><strong className="text-slate-900">Communication & Interaction</strong> — speech therapy, sign language, picture communication, social skills and assistive technology.</li>
-                <li><strong className="text-slate-900">Cognitive & Learning</strong> — sensory activities, fine-motor practice, early literacy and numeracy, occupational therapy.</li>
-                <li><strong className="text-slate-900">Social, Emotional & Mental Health</strong> — social stories, mindfulness, play therapy, group activities and family counselling.</li>
-                <li><strong className="text-slate-900">Sensory & Physical Needs</strong> — sensory integration, physiotherapy, adaptive equipment and mobility aids.</li>
+                <li>
+                  <strong className="text-slate-900">
+                    Communication & Interaction
+                  </strong>{" "}
+                  — speech therapy, sign language, picture communication,
+                  social skills and assistive technology.
+                </li>
+                <li>
+                  <strong className="text-slate-900">
+                    Cognitive & Learning
+                  </strong>{" "}
+                  — sensory activities, fine-motor practice, early literacy and
+                  numeracy, occupational therapy.
+                </li>
+                <li>
+                  <strong className="text-slate-900">
+                    Social, Emotional & Mental Health
+                  </strong>{" "}
+                  — social stories, mindfulness, play therapy, group activities
+                  and family counselling.
+                </li>
+                <li>
+                  <strong className="text-slate-900">
+                    Sensory & Physical Needs
+                  </strong>{" "}
+                  — sensory integration, physiotherapy, adaptive equipment and
+                  mobility aids.
+                </li>
               </ul>
             </div>
           </Reveal>
@@ -338,16 +411,34 @@ export default function AboutPage() {
       <section id="partners" className="container-x scroll-mt-24 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow">Our Partners</span>
-          <h2 className="section-title">Organisations that make the Centre possible</h2>
+          <h2 className="section-title">
+            Organisations that make the Centre possible
+          </h2>
         </Reveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {partners.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.05}>
               <article className="card h-full">
-                <ImagePlaceholder label={`Logo: ${p.name}`} tint={p.tint} className="h-24 w-full rounded-2xl" />
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={`${p.name} logo`}
+                    width={400}
+                    height={240}
+                    className="h-24 w-full rounded-2xl bg-white object-contain"
+                  />
+                ) : (
+                  <ImagePlaceholder
+                    label={`Logo: ${p.name}`}
+                    tint={p.tint}
+                    className="h-24 w-full rounded-2xl"
+                  />
+                )}
                 <h3 className="mt-4 text-lg font-bold">{p.name}</h3>
                 <p className="text-xs font-semibold text-star-blue">{p.full}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{p.text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  {p.text}
+                </p>
               </article>
             </Reveal>
           ))}
@@ -360,10 +451,13 @@ export default function AboutPage() {
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Our Team</span>
-            <h2 className="section-title">The people behind every small victory</h2>
+            <h2 className="section-title">
+              The people behind every small victory
+            </h2>
             <p className="mt-4 text-slate-600">
-              A small team of teachers, a staff trainer, a community liaison, care staff and parents — supported
-              by volunteers and specialist therapists whenever they are available.
+              A small team of teachers, a staff trainer, a community liaison,
+              care staff and parents — supported by volunteers and specialist
+              therapists whenever they are available.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -379,10 +473,16 @@ export default function AboutPage() {
                       className="h-64 w-full rounded-2xl border border-slate-200 bg-white object-contain"
                     />
                   ) : (
-                    <ImagePlaceholder label={`Photo: ${t.name}`} tint={t.tint} className="h-40 w-full rounded-2xl" />
+                    <ImagePlaceholder
+                      label={`Photo: ${t.name}`}
+                      tint={t.tint}
+                      className="h-40 w-full rounded-2xl"
+                    />
                   )}
                   <h3 className="mt-4 text-lg font-bold">{t.name}</h3>
-                  <p className="text-sm font-semibold text-star-blue">{t.role}</p>
+                  <p className="text-sm font-semibold text-star-blue">
+                    {t.role}
+                  </p>
                   <p className="mt-2 text-sm text-slate-600">{t.note}</p>
                 </article>
               </Reveal>
@@ -397,20 +497,48 @@ export default function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-5">
           <Reveal className="lg:col-span-2">
             <div className="card h-full border-star-green/30 bg-white">
-              <HandHeart className="h-10 w-10 text-star-green" aria-hidden="true" />
-              <h2 className="mt-4 text-2xl font-extrabold">Join as a Volunteer</h2>
+              <HandHeart
+                className="h-10 w-10 text-star-green"
+                aria-hidden="true"
+              />
+              <h2 className="mt-4 text-2xl font-extrabold">
+                Join as a Volunteer
+              </h2>
               <p className="mt-3 leading-relaxed text-slate-600">
-                Physiotherapists, occupational and speech therapists are especially welcome to join our home
-                visits and IEP sessions — but you do not need a qualification to make a difference. Volunteers
-                help with play, art, lunch and outdoor time, or simply sit beside a child who needs a friend.
+                Physiotherapists, occupational and speech therapists are
+                especially welcome to join our home visits and IEP sessions —
+                but you do not need a qualification to make a difference.
+                Volunteers help with play, art, lunch and outdoor time, or
+                simply sit beside a child who needs a friend.
               </p>
               <ul className="mt-5 space-y-2 text-sm text-slate-600">
-                <li className="flex gap-2"><Handshake className="h-4 w-4 flex-none text-star-green" aria-hidden="true" /> Weekdays 9:00 – 15:00, Mae Sot</li>
-                <li className="flex gap-2"><Handshake className="h-4 w-4 flex-none text-star-green" aria-hidden="true" /> Orientation and child safeguarding training provided</li>
-                <li className="flex gap-2"><Handshake className="h-4 w-4 flex-none text-star-green" aria-hidden="true" /> Burmese, Thai or English speakers welcome</li>
+                <li className="flex gap-2">
+                  <Handshake
+                    className="h-4 w-4 flex-none text-star-green"
+                    aria-hidden="true"
+                  />
+                  Weekdays 9:00 – 15:00, Mae Sot
+                </li>
+                <li className="flex gap-2">
+                  <Handshake
+                    className="h-4 w-4 flex-none text-star-green"
+                    aria-hidden="true"
+                  />
+                  Orientation and child safeguarding training provided
+                </li>
+                <li className="flex gap-2">
+                  <Handshake
+                    className="h-4 w-4 flex-none text-star-green"
+                    aria-hidden="true"
+                  />
+                  Burmese, Thai or English speakers welcome
+                </li>
               </ul>
               <p className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-700">
-                <Flower2 className="h-4 w-4 text-star-yellow" aria-hidden="true" />
+                <Flower2
+                  className="h-4 w-4 text-star-yellow"
+                  aria-hidden="true"
+                />
                 Minimum commitment: one morning a week for three months
               </p>
             </div>
