@@ -134,7 +134,7 @@ const team: TeamMember[] = [
     role: "Principal",
     note: "I want to support children with disabilities and help them build dignity, confidence and independence through education and care.",
     tint: "blue",
-    image: "/Naw-Thoo-Mwe-Paw.jpg",
+    image: "/ThooMwePaw.jpg",
   },
   {
     name: "Saw Moo Kapaw Say Reh",
