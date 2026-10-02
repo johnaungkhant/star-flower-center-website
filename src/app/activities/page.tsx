@@ -112,11 +112,12 @@ export const metadata: Metadata = {
 
 const activities = [
   {
-    image: "/Saw-Hay-Blut.jpg",
+   
     title: "Individual Education Plans",
     icon: BookOpenCheck,
     tint: "blue",
     text: "Every child is assessed and given an IEP with achievable goals across communication, cognition, social-emotional development and physical needs. Teachers work one-to-one with each child and review progress regularly with parents.",
+     image: "/Saw-Hay-Blut.jpg"
   },
   {
     title: "Learning Through Play",
