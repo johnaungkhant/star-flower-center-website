@@ -112,6 +112,7 @@ export const metadata: Metadata = {
 
 const activities = [
   {
+    image: "/Saw-Hay-Blut.jpg",
     title: "Individual Education Plans",
     icon: BookOpenCheck,
     tint: "blue",
@@ -230,14 +231,21 @@ export default function ActivitiesPage() {
 
       {/* Activities */}
       <section className="container-x py-20">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="section-eyebrow">Our Programme</span>
-          <h2 className="section-title">What we do — at the Centre, at home and in the community</h2>
-          <p className="mt-4 text-slate-600">
-            The Centre is open Monday to Friday, 9:00 – 15:00. Transport, meals and all activities are
-            provided free of charge.
-          </p>
-        </Reveal>
+        <Reveal
+          {...{
+            className: "mx-auto max-w-2xl text-center",
+            children: (
+              <>
+                <span className="section-eyebrow">Our Programme</span>
+                <h2 className="section-title">What we do — at the Centre, at home and in the community</h2>
+                <p className="mt-4 text-slate-600">
+                  The Centre is open Monday to Friday, 9:00 – 15:00. Transport, meals and all activities are
+                  provided free of charge.
+                </p>
+              </>
+            ),
+          }}
+        />
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {activities.map((a, i) => (
             <Reveal key={a.title} delay={i * 0.05}>
@@ -258,14 +266,21 @@ export default function ActivitiesPage() {
       {/* Stories */}
       <section id="stories" className="scroll-mt-24 bg-amber-50/40 py-20">
         <div className="container-x">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="section-eyebrow">Stories From Our Community</span>
-            <h2 className="section-title">Small changes, real progress</h2>
-            <p className="mt-4 text-slate-600">
-              Shared by parents, community elders and teachers. Each story represents hundreds of quiet hours
-              of effort — by the children most of all.
-            </p>
-          </Reveal>
+          <Reveal
+            {...{
+              className: "mx-auto max-w-2xl text-center",
+              children: (
+                <>
+                  <span className="section-eyebrow">Stories From Our Community</span>
+                  <h2 className="section-title">Small changes, real progress</h2>
+                  <p className="mt-4 text-slate-600">
+                    Shared by parents, community elders and teachers. Each story represents hundreds of quiet hours
+                    of effort — by the children most of all.
+                  </p>
+                </>
+              ),
+            }}
+          />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {stories.map((s, i) => (
               <Reveal key={s.name} delay={i * 0.05}>
