@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Blocks,
   BookOpenCheck,
@@ -9,6 +10,7 @@ import {
   School,
   Stethoscope,
   Users,
+  type LucideIcon,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
@@ -21,63 +23,79 @@ export const metadata: Metadata = {
     "Explore the daily programme, Individual Education Plans, parent trainings, home visits and community activities at Star Flower Centre, and read stories of children making progress.",
 };
 
-const activities = [
+type Activity = {
+  title: string;
+  icon: LucideIcon;
+  tint: "blue" | "yellow" | "green" | "red";
+  text: string;
+  image: string | null;
+};
+
+const activities: Activity[] = [
   {
     title: "Individual Education Plans",
     icon: BookOpenCheck,
     tint: "blue",
     text: "Every child is assessed and given an IEP with achievable goals across communication, cognition, social-emotional development and physical needs. Teachers work one-to-one with each child and review progress regularly with parents.",
-    image: "/logo.jpg",
+    image: "/iep.jpg",
   },
   {
     title: "Learning Through Play",
     icon: Blocks,
     tint: "yellow",
     text: "Morning circle, songs and stories, chanting the alphabet and counting, arts and crafts, water play and topic-based lessons. Children learn by doing, and by doing it together.",
+    image: null,
   },
   {
     title: "Health, Nutrition & Care",
     icon: Stethoscope,
     tint: "green",
     text: "A morning snack, a nutritious lunch, showers and clean clothes every day. Vaccinations, hygiene routines and referrals to health care are arranged with partners such as SMRU.",
+    image: null,
   },
   {
     title: "Home Visits & Early Intervention",
     icon: Home,
     tint: "red",
     text: "Our community liaison identifies children in migrant communities. Teachers and trainers visit homes to show families feeding adaptations, physiotherapy exercises and ways to play, then invite children to the Centre.",
+    image: null,
   },
   {
     title: "Parent Training & PTA",
     icon: Users,
     tint: "blue",
     text: "Quarterly trainings on the value of education, types of disabilities, inclusion, child protection, speech and communication, and practical ways to help at home. Parents also join open days and Centre events.",
+    image: null,
   },
   {
     title: "Toy Box Scheme",
     icon: Gift,
     tint: "yellow",
     text: "Children borrow a pencil case, exercise book, drawing book, crayons and colouring sheets to take home, so learning continues after the school day ends.",
+    image: null,
   },
   {
     title: "Community Trainings",
     icon: Megaphone,
     tint: "green",
     text: "Sessions for community members and other schools on disability, discrimination and life skills, building peer-support networks so families no longer feel alone.",
+    image: null,
   },
   {
     title: "Inclusive Education",
     icon: School,
     tint: "red",
     text: "Where it benefits the child, students join a local migrant learning centre with teacher-aide support, and we train those schools so more children with special needs can be welcomed.",
+    image: null,
   },
   {
     title: "School Fundraising",
     icon: Coins,
     tint: "blue",
     text: "Parents, teachers and children sell food, drinks and handmade items at community events, raising funds for the Centre and pride in what the children can make.",
+    image: null,
   },
-] as const;
+];
 
 const stories = [
   {
@@ -144,21 +162,42 @@ export default function ActivitiesPage() {
       <section className="container-x py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow">Our Programme</span>
-          <h2 className="section-title">What we do — at the Centre, at home and in the community</h2>
+          <h2 className="section-title">
+            What we do — at the Centre, at home and in the community
+          </h2>
           <p className="mt-4 text-slate-600">
-            The Centre is open Monday to Friday, 9:00 – 15:00. Transport, meals and all activities are
-            provided free of charge.
+            The Centre is open Monday to Friday, 9:00 – 15:00. Transport, meals
+            and all activities are provided free of charge.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {activities.map((a, i) => (
             <Reveal key={a.title} delay={i * 0.05}>
               <article className="card flex h-full flex-col gap-5">
-                <ImagePlaceholder label={`Photo: ${a.title}`} tint={a.tint} className="h-40 w-full flex-none rounded-2xl" />
+                {a.image ? (
+                  <Image
+                    src={a.image}
+                    alt={`Photo: ${a.title}`}
+                    width={600}
+                    height={400}
+                    className="h-40 w-full flex-none rounded-2xl object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder
+                    label={`Photo: ${a.title}`}
+                    tint={a.tint}
+                    className="h-40 w-full flex-none rounded-2xl"
+                  />
+                )}
                 <div>
-                  <a.icon className="h-7 w-7 text-slate-700" aria-hidden="true" />
+                  <a.icon
+                    className="h-7 w-7 text-slate-700"
+                    aria-hidden="true"
+                  />
                   <h3 className="mt-3 text-lg font-bold">{a.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{a.text}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {a.text}
+                  </p>
                 </div>
               </article>
             </Reveal>
@@ -174,22 +213,31 @@ export default function ActivitiesPage() {
             <span className="section-eyebrow">Stories From Our Community</span>
             <h2 className="section-title">Small changes, real progress</h2>
             <p className="mt-4 text-slate-600">
-              Shared by parents, community elders and teachers. Each story represents hundreds of quiet hours
-              of effort — by the children most of all.
+              Shared by parents, community elders and teachers. Each story
+              represents hundreds of quiet hours of effort — by the children
+              most of all.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {stories.map((s, i) => (
               <Reveal key={s.name} delay={i * 0.05}>
                 <article className="card flex h-full flex-col overflow-hidden p-0">
-                  <ImagePlaceholder label={`Photo: ${s.name}`} tint={s.tint} className="h-44 w-full" />
+                  <ImagePlaceholder
+                    label={`Photo: ${s.name}`}
+                    tint={s.tint}
+                    className="h-44 w-full"
+                  />
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex items-center justify-between text-xs font-semibold">
-                      <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-700">{s.tag}</span>
+                      <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-700">
+                        {s.tag}
+                      </span>
                       <span className="text-slate-500">{s.label}</span>
                     </div>
                     <h3 className="mt-4 text-lg font-bold">{s.name}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{s.excerpt}</p>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                      {s.excerpt}
+                    </p>
                   </div>
                 </article>
               </Reveal>
