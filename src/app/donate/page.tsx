@@ -19,6 +19,15 @@ const impact = [
   { icon: HeartHandshake, amount: "฿15,000", text: "A full month of schooling and therapy for one child." },
 ];
 
+const budgetBreakdown = [
+  { label: "Lunch and Snacks", daily: 50, monthly: 1100, yearly: 11000 },
+  { label: "Hygiene", daily: 10, monthly: 220, yearly: 2200 },
+  { label: "Health Care", daily: 20, monthly: 440, yearly: 4400 },
+  { label: "Total", daily: 80, monthly: 1660, yearly: 17600 },
+];
+
+const roundSupportAmount = (value: number) => Math.ceil(value / 50) * 50;
+
 export default function DonatePage() {
   return (
     <>
@@ -46,6 +55,52 @@ export default function DonatePage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* Budget breakdown */}
+      <section className="container-x py-16" aria-labelledby="budget-breakdown-heading">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="section-eyebrow">Budget Breakdown</p>
+          <h2 id="budget-breakdown-heading" className="section-title">
+            What a typical month of care looks like
+          </h2>
+        </div>
+
+        <div className="mt-10 overflow-hidden rounded-[2rem] border border-rose-100 bg-white shadow-soft">
+          <div className="grid grid-cols-[1.7fr_repeat(3,minmax(0,1fr))] border-b border-slate-200 bg-slate-50 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <div className="px-4 py-3 sm:px-6">Category</div>
+            <div className="px-4 py-3 text-center sm:px-6">Daily</div>
+            <div className="px-4 py-3 text-center sm:px-6">Monthly</div>
+            <div className="px-4 py-3 text-center sm:px-6">Yearly</div>
+          </div>
+
+          {budgetBreakdown.map((item) => {
+            const isTotal = item.label === "Total";
+            const dailyDisplay = isTotal ? roundSupportAmount(item.daily) : item.daily;
+            const monthlyDisplay = isTotal ? roundSupportAmount(item.monthly) : item.monthly;
+            const yearlyDisplay = isTotal ? roundSupportAmount(item.yearly) : item.yearly;
+
+            return (
+              <div
+                key={item.label}
+                className={`grid grid-cols-[1.7fr_repeat(3,minmax(0,1fr))] border-b border-slate-200 last:border-b-0 ${
+                  isTotal ? "bg-rose-50/80 font-bold text-slate-900" : "bg-white text-slate-700"
+                }`}
+              >
+                <div className="px-4 py-4 sm:px-6">
+                  <span className={isTotal ? "text-base font-extrabold" : "text-sm font-semibold"}>{item.label}</span>
+                </div>
+                <div className="px-4 py-4 text-center text-sm sm:px-6">฿{dailyDisplay.toLocaleString("en-US")}</div>
+                <div className="px-4 py-4 text-center text-sm sm:px-6">฿{monthlyDisplay.toLocaleString("en-US")}</div>
+                <div className="px-4 py-4 text-center text-sm sm:px-6">฿{yearlyDisplay.toLocaleString("en-US")}</div>
+              </div>
+            );
+          })}
+        </div>
+
+        <p className="mt-4 text-center text-sm text-slate-500">
+          Rounded for easier giving: the total monthly support shown here is <span className="font-semibold text-slate-700">฿1,700</span>, while the exact sum of the category totals is <span className="font-semibold text-slate-700">฿1,760</span>.
+        </p>
       </section>
 
       {/* Donation methods */}
