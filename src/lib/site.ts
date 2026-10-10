@@ -2,12 +2,12 @@ export const site = {
   name: "Star Flower Centre",
   fullName: "Star Flower Centre Special Education Needs",
   tagline: "Work, learn and play together.",
-  phone: "+66 (0) 2 000 0000",
-  email: "hello@starflowercentre.org",
+  phone: "+66 612584527",
+  email: "contact@starflowercentre.org",
   address: {
     // Replace line1 with the Centre's street address.
-    line1: "123 Sunflower Lane",
-    line2: "Mae Sot, Tak Province 63110",
+    line1: "644, Moo 2 Smarsapkarm Road Phrahtapadan",
+    line2: "Mae Sot District, Tak 63110",
     country: "Thailand",
   },
   hours: [
@@ -15,11 +15,10 @@ export const site = {
     { day: "Saturday, Sunday & Public Holidays", time: "Closed" },
   ],
   // Replace with the centre's registered PromptPay ID (phone number, national ID, or e-wallet ID).
-  promptPayId: "0812345678",
+  promptPayId: "06646157927",
   social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    line: "https://line.me",
+    facebook: "https://www.facebook.com/StarFlowerCentre",
+    
   },
 };
 
