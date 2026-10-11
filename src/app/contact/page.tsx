@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const telHref = `tel:${site.phone.replace(/[^\d+]/g, "")}`;
-const mapsQuery = encodeURIComponent(`${site.name}, ${site.address.line1}, ${site.address.line2}, ${site.address.country}`);
+const mapCoordinates = "16.715524,98.612704";
 
 export default function ContactPage() {
   return (
@@ -123,7 +123,7 @@ export default function ContactPage() {
               </h2>
             </div>
             <a
-              href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`}
+              href={`https://www.google.com/maps/search/?api=1&query=${mapCoordinates}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"
@@ -132,10 +132,9 @@ export default function ContactPage() {
             </a>
           </div>
           <div className="overflow-hidden rounded-3xl shadow-soft ring-1 ring-slate-100">
-            {/* Replace `q=` with the centre's exact coordinates or Place ID once confirmed. */}
             <iframe
               title="Map showing the location of Star Flower Centre"
-              src={`https://maps.google.com/maps?q=${mapsQuery}&z=15&output=embed`}
+              src={`https://maps.google.com/maps?q=${mapCoordinates}&z=15&output=embed`}
               className="h-[380px] w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
