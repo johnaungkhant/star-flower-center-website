@@ -199,6 +199,266 @@ export default function ActivitiesPage() {
               </div>
             </article>
           </Reveal>
+          <Reveal delay={0.15}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/ma-hnin-si-phu-evidence.png"
+                  alt="Ma Hnin Si Phu taking part in therapy and learning activities"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Ma Hnin Si Phu
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 18 <span aria-hidden="true">|</span> Enrolled 2012–2019
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with severe cerebral palsy, Ma Hnin Si Phu was
+                  non-verbal, unable to walk, and unable to care for herself.
+                  Through seven years of intensive physical motor therapy and
+                  individualized cognitive learning at SFC, she developed
+                  independent self-care skills, became actively engaged in her
+                  community, and gained functional independence. In 2019, she
+                  successfully transferred to a Thai government special needs
+                  school.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/independent-living-evidence.png"
+                  alt="A student practicing laundry and writing skills"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Growing Independence
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with cerebral palsy, speech difficulties, and a
+                  reliance on a walker, this student developed writing
+                  literacy, self-care skills, and the ability to live
+                  independently. They now reside at Heavenly Home boarding
+                  house, where they manage their laundry and household chores.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/ma-sa-nay-oo-evidence.png"
+                  alt="Ma Sa Nay Oo taking part in practical learning activities"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Ma Sa Nay Oo
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 20 <span aria-hidden="true">|</span> Enrolled 2013–2016
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with autism spectrum disorder, Ma Sa Nay Oo was
+                  non-verbal and experienced significant learning and focus
+                  difficulties. She completed SFC&apos;s behavioral graduation
+                  program and now manages daily sales and operations at her
+                  mother&apos;s commercial shop in Moo 10, Mae Pa, Mae Sot.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/saw-aung-htauk-evidence.png"
+                  alt="Saw Aung Htauk practicing household skills and working in a shop"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Saw Aung Htauk
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 19 <span aria-hidden="true">|</span> Enrolled 2009–2017
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with cerebral palsy, Saw Aung Htauk was unable to
+                  walk, dress, or manage basic self-care. By graduating in
+                  2017, he had regained the ability to walk and developed
+                  independent self-care and household skills. He established
+                  his own grocery store and small farming business in Mae Ka
+                  Sa, Thailand, and now contributes financial and in-kind
+                  support to Star Flower Centre.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.35}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/mg-aung-thu-phyo-evidence.png"
+                  alt="Mg Aung Thu Phyo taking part in motor and social learning activities"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Mg Aung Thu Phyo
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 19 <span aria-hidden="true">|</span> Enrolled 2009–2018
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with cerebral palsy, Mg Aung Thu Phyo was unable to
+                  grasp objects or communicate verbally. He developed
+                  functional verbal communication, manual hand dexterity, and
+                  strong peer relationship skills.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.4}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/mg-htet-linn-aung-evidence.png"
+                  alt="Mg Htet Linn Aung participating in learning and daily living activities"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Mg Htet Linn Aung
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 26 <span aria-hidden="true">|</span> Enrolled 2017–2018
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with Down syndrome, Mg Htet Linn Aung was socially
+                  withdrawn and unable to manage daily self-care. He became
+                  active, socially confident, and independent. He now lives in
+                  Myawaddy, Myanmar, where he manages household tasks and
+                  assists his grandmother.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.45}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/solomon-evidence.png"
+                  alt="Solomon practicing self-care and household tasks"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Solomon
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 19 <span aria-hidden="true">|</span> Enrolled 2017–2018
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with autism and dependent on medication, Solomon
+                  was socially withdrawn. He developed independent self-care
+                  skills and social confidence. He now assists his peers and
+                  takes care of chores at Heavenly Home Centre.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.5}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/mg-zaw-zaw-evidence.png"
+                  alt="Mg Zaw Zaw developing practical technical and vocational skills"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Mg Zaw Zaw
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 19 <span aria-hidden="true">|</span> Enrolled 2009–2018
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with ADHD, Mg Zaw Zaw faced significant attention
+                  and communication challenges. Through SFC&apos;s structured
+                  behavioral and vocational modules, he developed stronger
+                  focus and technical skills. He now works as a motorcycle
+                  mechanic at a repair shop in Mae Tao, Mae Sot.
+                </p>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.55}>
+            <article className="mx-auto mt-8 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/ma-zin-hnin-wai-evidence.png"
+                  alt="Ma Zin Hnin Wai practicing independent daily living skills"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Ma Zin Hnin Wai
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 22 <span aria-hidden="true">|</span> Enrolled 2009–2017
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with cerebral palsy, Ma Zin Hnin Wai was unable to
+                  walk or manage daily tasks. She graduated in 2017 with
+                  independent motor and self-care skills. She now owns and
+                  operates her own retail store in Mae Tao, Mae Sot.
+                </p>
+              </div>
+            </article>
+          </Reveal>
         </div>
       </section>
     </>
