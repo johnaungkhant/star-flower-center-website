@@ -104,57 +104,6 @@ const activities: Activity[] = [
   },
 ];
 
-const stories = [
-  {
-    name: "From wandering to singing",
-    tag: "Community Voice",
-    tint: "red",
-    label: "Community elders",
-    excerpt:
-      "Elders in one migrant community told us that before the Centre, the children used to wander about aimlessly, often dirty and with no one to guide them. Now they play constructively, sing songs, count and chant the alphabet, and they look after themselves and each other.",
-  },
-  {
-    name: "Both parents can work again",
-    tag: "Family Impact",
-    tint: "green",
-    label: "Parents",
-    excerpt:
-      "With their children safe and learning at the Centre from Monday to Friday, both parents are now able to go to work. Families tell us this has raised their self-esteem and income, and reduced the stress of caring for a child with a disability alone.",
-  },
-  {
-    name: "Songkran, hats and concerts",
-    tag: "Celebration",
-    tint: "yellow",
-    label: "Centre events",
-    excerpt:
-      "Water fights at Songkran, a hat-making day, concerts and picnics bring children, parents and teachers together. For many families it is the first time their child has been included in a public celebration.",
-  },
-  {
-    name: "Coffee, biscuits and confidence",
-    tag: "Parent Training",
-    tint: "blue",
-    label: "Training days",
-    excerpt:
-      "Parents' training days start with coffee and biscuits and end with new skills: how to help a child eat independently, how to communicate without words, how to use positive discipline. Parents who once felt ashamed now speak proudly about their children.",
-  },
-  {
-    name: "Exercises at home",
-    tag: "Home Visits",
-    tint: "green",
-    label: "Early intervention",
-    excerpt:
-      "On home visits, teachers and volunteer therapists show families simple physiotherapy exercises and how to adapt the home — a supportive seat, a spoon that is easier to hold. Small changes that let a child feed themselves for the first time.",
-  },
-  {
-    name: "Every day, at school",
-    tag: "Inclusion",
-    tint: "red",
-    label: "Daily attendance",
-    excerpt:
-      "Children who were once kept at home, isolated from their communities, now arrive at the Centre every weekday. They share meals, exercise, sing and learn alongside their friends — and some go on to join local migrant learning centres with our support.",
-  },
-] as const;
-
 export default function ActivitiesPage() {
   return (
     <>
@@ -217,39 +166,8 @@ export default function ActivitiesPage() {
       <section id="stories" className="scroll-mt-24 bg-amber-50/40 py-20">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="section-eyebrow">Stories From Our Community</span>
-            <h2 className="section-title">Small changes, real progress</h2>
-            <p className="mt-4 text-slate-600">
-              Shared by parents, community elders and teachers. Each story
-              represents hundreds of quiet hours of effort — by the children
-              most of all.
-            </p>
+            <span className="section-eyebrow">Our Evidences Of Scuccessful Education</span>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {stories.map((s, i) => (
-              <Reveal key={s.name} delay={i * 0.05}>
-                <article className="card flex h-full flex-col overflow-hidden p-0">
-                  <ImagePlaceholder
-                    label={`Photo: ${s.name}`}
-                    tint={s.tint}
-                    className="h-44 w-full"
-                  />
-                  <div className="flex flex-1 flex-col p-6">
-                    <div className="flex items-center justify-between text-xs font-semibold">
-                      <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-700">
-                        {s.tag}
-                      </span>
-                      <span className="text-slate-500">{s.label}</span>
-                    </div>
-                    <h3 className="mt-4 text-lg font-bold">{s.name}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
-                      {s.excerpt}
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
     </>
