@@ -67,50 +67,6 @@ export default function DonatePage() {
               Your support helps provide inclusive education and care.
             </p>
           </div>
-          <div className="w-fit rounded-full bg-blue-50 px-4 py-2 text-sm font-bold text-blue-900 ring-1 ring-blue-200">
-            MECC Code: 39 <span className="px-1 text-blue-400">|</span> Tak
-            PESAO 2
-          </div>
-        </div>
-
-        <div
-          role="alert"
-          className="rounded-3xl border-2 border-red-300 bg-red-50 p-5 shadow-sm sm:p-6"
-        >
-          <div className="flex items-start gap-3">
-            <span className="rounded-xl bg-red-600 p-2 text-white">
-              <AlertTriangle className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <div>
-              <h2 className="text-lg font-extrabold text-red-900">
-                Important: verify recipient details before confirming
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-red-800">
-                Before you approve the transfer, check that your banking app
-                shows these exact details:
-              </p>
-              <dl className="mt-4 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-red-200 bg-white px-4 py-3">
-                  <dt className="text-xs font-bold uppercase tracking-wide text-red-700">
-                    Receiver name
-                  </dt>
-                  <dd className="mt-1 text-lg font-extrabold text-slate-900">
-                    AUNG KHANT WIN
-                  </dd>
-                </div>
-                <div className="rounded-2xl border border-red-200 bg-white px-4 py-3">
-                  <dt className="text-xs font-bold uppercase tracking-wide text-red-700">
-                    PromptPay ID
-                  </dt>
-                  <dd className="mt-1 text-lg font-extrabold text-slate-900">
-                    064 615 7921
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-        </div>
-
         <div className="mx-auto mt-12 max-w-3xl text-center">
           <p className="section-eyebrow">Choose a contribution</p>
           <h2 id="donation-heading" className="section-title">
@@ -156,6 +112,51 @@ export default function DonatePage() {
             </Reveal>
           ))}
         </div>
+          <div className="w-fit rounded-full bg-blue-50 px-4 py-2 text-sm font-bold text-blue-900 ring-1 ring-blue-200">
+            MECC Code: 39 <span className="px-1 text-blue-400">|</span> Tak
+            PESAO 2
+          </div>
+        </div>
+
+        <div
+          role="alert"
+          className="rounded-3xl border-2 border-red-300 bg-red-50 p-5 shadow-sm sm:p-6"
+        >
+          <div className="flex items-start gap-3">
+            <span className="rounded-xl bg-red-600 p-2 text-white">
+              <AlertTriangle className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 className="text-lg font-extrabold text-red-900">
+                Important: verify recipient details before confirming
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-red-800">
+                Before you approve the transfer, check that your banking app
+                shows these exact details:
+              </p>
+              <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-red-200 bg-white px-4 py-3">
+                  <dt className="text-xs font-bold uppercase tracking-wide text-red-700">
+                    Receiver name
+                  </dt>
+                  <dd className="mt-1 text-lg font-extrabold text-slate-900">
+                    AUNG KHANT WIN
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-red-200 bg-white px-4 py-3">
+                  <dt className="text-xs font-bold uppercase tracking-wide text-red-700">
+                    PromptPay ID
+                  </dt>
+                  <dd className="mt-1 text-lg font-extrabold text-slate-900">
+                    064 615 7921
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <section
