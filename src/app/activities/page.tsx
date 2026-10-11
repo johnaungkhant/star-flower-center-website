@@ -168,6 +168,37 @@ export default function ActivitiesPage() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Our Evidences Of Scuccessful Education</span>
           </Reveal>
+          <Reveal delay={0.1}>
+            <article className="mx-auto mt-10 grid max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-amber-100 md:grid-cols-2">
+              <div className="relative min-h-72 bg-slate-100 md:min-h-full">
+                <Image
+                  src="/mg-thwa-hit-evidence.png"
+                  alt="Mg Thwa Hit taking part in learning and life-skills activities"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-9">
+                <p className="section-eyebrow">Student Success Story</p>
+                <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Mg Thwa Hit
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-amber-700">
+                  Age 21 <span aria-hidden="true">|</span> Enrolled 2009–2017
+                </p>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Admitted with cerebral palsy, Mg Thwa Hit was non-verbal,
+                  unable to read or write, and unable to manage his toileting
+                  independently. Through eight years of intensive special
+                  education and functional skills training at SFC, he developed
+                  independent self-care skills, literacy, and advanced computer
+                  proficiency. He went on to open his own desktop publishing
+                  shop and actively helps with his parents&apos; family business.
+                </p>
+              </div>
+            </article>
+          </Reveal>
         </div>
       </section>
     </>
