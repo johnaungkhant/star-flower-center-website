@@ -6,7 +6,7 @@ export const site = {
   email: "contact@starflowercentre.org",
   address: {
     // Replace line1 with the Centre's street address.
-    line1: "644, Moo 2 Smarsapkarm Road Phrahtapadan",
+    line1: "15 A, Moo2, Phra That Pha Daeng, Seap Daeng Subdistrict",
     line2: "Mae Sot District, Tak 63110",
     country: "Thailand",
   },
